@@ -20,9 +20,9 @@
 </style>
 <body>
 
-    <div class="humanizeJS">Dette skal forskyves.</div>
+    <div class="skribbler">Dette skal forskyves.</div>
 
-    <div class="humanizeJS">Dette skal også forskyves.</div>
+    <div class="skribbler">Dette skal også forskyves.</div>
 
     <button onClick="skribble()">skribble</button>
     <button onClick="styled();">styleset</button>
@@ -33,7 +33,7 @@
     WASSAAP! hopefully my shitty ass psuedo code was helpful. Now go do what ever you want! Herman Winther 2024*/
 
     function skribble() {
-        var humanizeText = document.querySelectorAll(".humanizeJS");
+        var humanizeText = document.querySelectorAll(".skribbler");
         for(let txt = 0; txt < humanizeText.length;txt++){
             var toBhuman = humanizeText[txt].innerHTML;
             humanizeText[txt].innerHTML = "<p id='paragraph" + txt + "'>";
@@ -48,7 +48,7 @@
                 }
                 document.getElementById('paragraph'+txt).innerHTML += "<span style='transform:scaleY(" + Math.floor(Math.random() * (115 - 95) + 95) *0.01 + ");'>" + "<span style='transform:rotate(" + Math.random() * (5 - 5) + 3 + "deg)" + ";'>" + toBhuman[i] + "</span>" + "</span>";
             }
-            humanizeText[txt].className = "humanized";
+            humanizeText[txt].className = "skribbled";
         }
     }
     function styled(){
