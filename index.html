@@ -5,7 +5,6 @@
     <title>Humanized Stylesetting</title>
     <!-- if you for some reason use this project - append this comment in your project <3
     WASSAAP! hopefully my shitty ass psuedo code was helpful. Now go do what ever you want! Herman Winther 2024-->
-</head>
 <style>
     span{
         display:inline-block;
@@ -18,7 +17,10 @@
         margin: 0;
     }
 </style>
+</head>
 <body>
+  <div style="padding-bottom:45vh"></div>
+  <center>
 
     <div class="skribbler">Dette skal forskyves.</div>
 
@@ -27,12 +29,13 @@
     <button onClick="skribble()">skribble</button>
     <button onClick="styled();">styleset</button>
     <button onClick="font();">change font</button>
-
+</center>
     <script>
     /*if you for some reason use this project - append this comment in your project <3
     WASSAAP! hopefully my shitty ass psuedo code was helpful. Now go do what ever you want! Herman Winther 2024*/
 
     function skribble() {
+      console.log("huh");
         var humanizeText = document.querySelectorAll(".skribbler");
         for(let txt = 0; txt < humanizeText.length;txt++){
             var toBhuman = humanizeText[txt].innerHTML;
