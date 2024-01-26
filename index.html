@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Humanized Stylesetting</title>
+    <!-- if you for some reason use this project - append this comment in your project <3
+    WASSAAP! hopefully my shitty ass psuedo code was helpful. Now go do what ever you want! Herman Winther 2024-->
+</head>
+<style>
+    span{
+        display:inline-block;
+    }
+    .stylesetindividual{
+        color:red;
+        margin: 0;
+    }
+    .paragraph{
+        margin: 0;
+    }
+</style>
+<body>
+
+    <div class="humanizeJS">Dette skal forskyves.</div>
+
+    <div class="humanizeJS">Dette skal også forskyves.</div>
+
+    <button onClick="skribble()">skribble</button>
+    <button onClick="styled();">styleset</button>
+    <button onClick="font();">change font</button>
+
+    <script>
+    /*if you for some reason use this project - append this comment in your project <3
+    WASSAAP! hopefully my shitty ass psuedo code was helpful. Now go do what ever you want! Herman Winther 2024*/
+
+    function skribble() {
+        var humanizeText = document.querySelectorAll(".humanizeJS");
+        for(let txt = 0; txt < humanizeText.length;txt++){
+            var toBhuman = humanizeText[txt].innerHTML;
+            humanizeText[txt].innerHTML = "<p id='paragraph" + txt + "'>";
+            for(let i = 0; i<toBhuman.length; i++){
+                if(toBhuman[i] == " "){
+                    document.getElementById('paragraph'+txt).innerHTML += "<span>" + " " + "</span>";
+                    continue;
+                }
+                if(Math.floor(Math.random()*2 +1) % 2){
+                    document.getElementById('paragraph'+txt).innerHTML += "<span style='transform:scaleY(" + Math.floor(Math.random() * (115 - 95) + 95) *0.01 + ");'>" + "<span style='transform:rotate(" + Math.random() * (5 - 10) + 10 + "deg)" + ";'>" + toBhuman[i] + "</span>" + "</span>";
+                    continue;
+                }
+                document.getElementById('paragraph'+txt).innerHTML += "<span style='transform:scaleY(" + Math.floor(Math.random() * (115 - 95) + 95) *0.01 + ");'>" + "<span style='transform:rotate(" + Math.random() * (5 - 5) + 3 + "deg)" + ";'>" + toBhuman[i] + "</span>" + "</span>";
+            }
+            humanizeText[txt].className = "humanized";
+        }
+    }
+    function styled(){
+        document.getElementById("paragraph1").className = "stylesetindividual";
+        document.getElementById("paragraph0").className = "paragraph";
+        
+    }
+    function font(){
+        document.querySelector("html").innerHTML += "<style>html{font-family:helvetica;}</style>";
+    }
+    </script>
+
+    
+</body>
+</html>
