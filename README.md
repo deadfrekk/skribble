@@ -10,4 +10,4 @@ inside N of paragraph, each character will become an inline style span element.
 blankspaces has been converted to a Three-per-em space, since the inline-block display option does not display a blank space.
 usefull blankspaces with width can be found here: https://www.namecheap.com/visual/font-generator/whitespace/
 
-this project is ment to be customized and was only ever a proof of concept.
+this project is meant to be customized and was only ever a proof of concept.
