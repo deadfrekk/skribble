@@ -1,5 +1,6 @@
 
 demo: https://cuts.neocities.org/skribbler
+
 Updated demo, this time with tags: https://cuts.neocities.org/papirverksted/manus
 
 i wanted to create an automated way to randomly offset each character in a paragraph.
